@@ -1,0 +1,52 @@
+{% extends "source.html" %} {% block content %}
+<script>
+  if ("{{alert}}" === "true") {
+    alert("{{message}}");
+    window.location.href = "{{ url_for('index') }}";
+  }
+</script>
+<form method="post">
+  <div class="form-group">
+    <select class="form-select" id="dropdown" name="option">
+      {% for item in functions['functions'] %}
+      <option value="{{item['func']}}" id="dropdown-menu">
+        {{item['func']}}
+      </option>
+      {% endfor %}
+    </select>
+
+    <input
+      class="form-control"
+      id="input_"
+      type="text"
+      name="input_"
+      placeholder="Enter a value"
+      autofocus
+    />
+    <button class="btn btn-outline-success" id="ans_btn" type="submit">
+      =
+    </button>
+    {% if res == "true" %}
+    <label
+      class="font-monospace fs-4 text-decoration-underline text-success"
+      id="lbl"
+    >
+      {{result}}
+    </label>
+    {% endif %}
+  </div>
+</form>
+{% endblock %} {% block footer %}
+<a
+  class="link-opacity-100 link-opacity-25-hover link-underline-info"
+  href="{{ url_for('help') }}"
+  id="link_"
+  >Help</a
+>
+<a
+  class="link-opacity-100 link-opacity-25-hover link-underline-info"
+  href="{{ url_for('about') }}"
+  id="link_about"
+  >About</a
+>
+{% endblock %}

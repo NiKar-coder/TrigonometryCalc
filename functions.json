@@ -1,0 +1,20 @@
+{
+  "functions": [
+    {
+      "func": "arcsin",
+      "mean": "Find the arc sine"
+    },
+    {
+      "func": "arcos",
+      "mean": "Find the arc cosine"
+    },
+    {
+      "func": "arctg",
+      "mean": "Find the arc tangent"
+    },
+    {
+      "func": "arcctg",
+      "mean": "Find the arc cotangent"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{% extends "source.html" %} {% block content %}
+<h2 class="text-primary" id="link_">U can learn sources here:</h2>
+<a
+  class="link-opacity-100 link-opacity-25-hover link-underline-info"
+  href="https://github.com/NiKar-coder/TrigonometryCalc"
+  id="link_about"
+>
+  https://github.com/NiKar-coder/TrigonometryCalc
+</a>
+{% endblock %} {% block footer %}
+<a
+  class="link-opacity-100 link-opacity-25-hover link-underline-info"
+  href="{{ url_for('index') }}"
+  id="link_"
+>
+  Back
+</a>
+{% endblock %}
