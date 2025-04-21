@@ -29,8 +29,8 @@ def index():
                                    alert='false', functions=get_functions())
         #except Exception:
             #return #render_template('index.html', res="false", alert="true",
-                                   message="Something went wrong",
-                                   functions=get_functions())
+                                   #message="Something went wrong",
+                                   #functions=get_functions())
     else:
         return render_template('index.html', res="false", alert="false",
                                functions=get_functions())
