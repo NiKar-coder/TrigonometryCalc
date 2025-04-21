@@ -59,7 +59,7 @@ def calculate(num_, fc):
     elif fc == "arcos":
         ans = math.degrees((math.acos(num)))
     else:
-        return str(round(eval(num_, GLOBS, {}), 3))
+        return str(round(eval(num_, GLOBS, {}), 4))
     return f'{round(ans, 4)}°'
 
 if __name__ == '__main__':
