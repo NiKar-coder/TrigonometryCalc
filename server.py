@@ -21,16 +21,16 @@ def get_functions():
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        #try:
+        try:
             input_ = request.form['input_']
             func = request.form['option']
             return render_template('index.html', res="true",
                                    result=calculate(input_, func),
                                    alert='false', functions=get_functions())
-        #except Exception:
-            #return render_template('index.html', res="false", alert="true",
-                                   #message="Something went wrong",
-                                   #functions=get_functions())
+        except Exception:
+            return render_template('index.html', res="false", alert="true",
+                                   message="Something went wrong",
+                                   functions=get_functions())
     else:
         return render_template('index.html', res="false", alert="false",
                                functions=get_functions())
@@ -59,7 +59,7 @@ def calculate(num, fc):
     elif fc == "arcos":
         ans = math.degrees((math.acos(num)))
     else:
-        ans = eval(num, GLOBS, {})
+        ans = eval(str(num), GLOBS, {})
     return f'{round(ans, 4)}°'
 
 if __name__ == '__main__':
