@@ -28,7 +28,7 @@ def index():
                                    result=calculate(input_, func),
                                    alert='false', functions=get_functions())
         #except Exception:
-            #return #render_template('index.html', res="false", alert="true",
+            #return render_template('index.html', res="false", alert="true",
                                    #message="Something went wrong",
                                    #functions=get_functions())
     else:
