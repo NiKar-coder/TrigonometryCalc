@@ -57,7 +57,9 @@ def calculate(num_, fc):
     elif fc == "tg":
         return round(math.tan(math.radians(num)), 4)
     elif fc == "ctg":
-        return round(math.cos(math.radians(num)) / math.sin(math.radians(num)), 4)
+        return round(math.cos(math.radians(num)) / math.sin(math.radians(num)),
+                     4)
+
 
 if __name__ == '__main__':
     app.run(host='192.168.1.2', port='8080', debug=True)
