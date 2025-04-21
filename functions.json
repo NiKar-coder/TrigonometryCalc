@@ -1,5 +1,17 @@
 {
   "functions": [
+    {"func": "sin",
+     "mean": "Find the sine"
+    },
+    {"func": "cos",
+     "mean": "Find the cosine"
+    },
+    {"func": "tg",
+     "mean": "Find the tangent"
+    },
+    {"func": "ctg",
+     "mean": "Find the cotangent"
+    },
     {
       "func": "arcsin",
       "mean": "Find the arc sine"
