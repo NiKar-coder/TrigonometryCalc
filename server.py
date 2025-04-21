@@ -8,7 +8,7 @@ GLOBS = {
     "tg": lambda x: math.tan(math.radians(x)),
     "sin": lambda x: math.sin(math.radians(x)),
     "ctg": lambda x: math.cos(math.radians(x)) / math.sin(math.radians(x)),
-    "cos": lambda x: math.cos(math.radians(x)),
+    "cos": lambda x: math.cos(math.radians(x))
 }
 
 
