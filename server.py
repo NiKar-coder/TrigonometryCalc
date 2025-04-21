@@ -3,14 +3,6 @@ import json
 import math
 app = Flask(__name__)
 
-GLOBS = {
-    "__builtins__": {},
-    "tg": lambda x: math.tan(math.radians(x)),
-    "sin": lambda x: math.sin(math.radians(x)),
-    "ctg": lambda x: math.cos(math.radians(x)) / math.sin(math.radians(x)),
-    "cos": lambda x: math.cos(math.radians(x))
-}
-
 
 def get_functions():
     with open("functions.json", "rt", encoding="utf8") as f:
@@ -51,16 +43,21 @@ def calculate(num_, fc):
         num_ = num_.replace(x, y)
     num = float(num_)
     if fc == "arctg":
-        return f'{round(math.degrees(math.atan(num)), 4)}°' 
+        return f'{round(math.degrees(math.atan(num)), 4)}°'
     elif fc == "arcsin":
-        ans = math.degrees(math.asin(num))
+        return f'{round(math.degrees(math.asin(num)), 4)}°'
     elif fc == "arcctg":
-        ans = math.degrees(math.pi / 2 - math.atan(num))
+        return f'{round(math.degrees(math.pi / 2 - math.atan(num)),4)}°'
     elif fc == "arcos":
-        ans = math.degrees((math.acos(num)))
-    else:
-        return str(round(eval(num_, GLOBS, {}), 4))
-    return f'{round(ans, 4)}°'
+        return f'{round(math.degrees((math.acos(num))), 4)}°'
+    elif fc == "cos":
+        return round(math.cos(math.radians(num)), 4)
+    elif fc == "sin":
+        return round(math.sin(math.radians(num)), 4)
+    elif fc == "tg":
+        return round(math.tan(math.radians(num)), 4)
+    elif fc == "ctg":
+        return round(math.cos(math.radians(num)) / math.sin(math.radians(num)), 4)
 
 if __name__ == '__main__':
     app.run(host='192.168.1.2', port='8080', debug=True)
