@@ -46,10 +46,10 @@ def about():
     return render_template('about.html')
 
 
-def calculate(num, fc):
+def calculate(num_, fc):
     for x, y in (",", "."), (" ", ""):
-        num = num.replace(x, y)
-    num = float(num)
+        num_ = num_.replace(x, y)
+    num = float(num_)
     if fc == "arctg":
         ans = math.degrees(math.atan(num))
     elif fc == "arcsin":
@@ -59,7 +59,7 @@ def calculate(num, fc):
     elif fc == "arcos":
         ans = math.degrees((math.acos(num)))
     else:
-        ans = eval(str(num), GLOBS, {})
+        return str(round(eval(num_, GLOBS, {}), 3))
     return f'{round(ans, 4)}°'
 
 if __name__ == '__main__':
