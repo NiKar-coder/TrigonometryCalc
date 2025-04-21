@@ -50,7 +50,6 @@ def calculate(num, fc):
     for x, y in (",", "."), (" ", ""):
         num = num.replace(x, y)
     num = float(num)
-    ans = int()
     if fc == "arctg":
         ans = math.degrees(math.atan(num))
     elif fc == "arcsin":
