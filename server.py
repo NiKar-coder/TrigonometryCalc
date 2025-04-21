@@ -5,8 +5,6 @@ app = Flask(__name__)
 
 GLOBS = {
     "__builtins__": {},
-    "sqrt": lambda x: math.sqrt(x),
-    "abs": lambda x: abs(x),
     "tg": lambda x: math.tan(math.radians(x)),
     "sin": lambda x: math.sin(math.radians(x)),
     "ctg": lambda x: math.cos(math.radians(x)) / math.sin(math.radians(x)),
