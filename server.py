@@ -61,8 +61,9 @@ def calculate(num, fc):
         ans = math.degrees(math.pi / 2 - math.atan(num))
     elif fc == "arcos":
         ans = math.degrees((math.acos(num)))
+    else:
+        ans = str(round(eval(num, GLOBS, {}), 3))
     return f'{round(ans, 4)}°'
-
 
 if __name__ == '__main__':
     app.run(host='192.168.1.2', port='8080', debug=True)
