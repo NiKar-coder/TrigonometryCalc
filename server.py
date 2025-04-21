@@ -51,7 +51,7 @@ def calculate(num_, fc):
         num_ = num_.replace(x, y)
     num = float(num_)
     if fc == "arctg":
-        ans = math.degrees(math.atan(num))
+        return f'{round(math.degrees(math.atan(num)), 4)}°' 
     elif fc == "arcsin":
         ans = math.degrees(math.asin(num))
     elif fc == "arcctg":
