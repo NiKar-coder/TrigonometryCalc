@@ -35,7 +35,7 @@ main {
   margin: 5px;
   width: auto;
   height: auto;
-  display: inline;
+  display: inline-block;
 }
 #link_about {
   margin: 5px;
