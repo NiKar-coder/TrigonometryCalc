@@ -1,10 +1,10 @@
 {% extends "source.html" %} {% block content %}
-<h2 class="text-center text-primary" id="functions">Functions</h2>
+<h2 class="text-center text-info" id="functions">Functions</h2>
 <div class="container div-inline">
   {% for item in functions['functions'] %}
   <div class="container div-inline">
-    <h3 class="text-success text-center" id="func">{{item["func"]}}</h3>
-    <h4 class="text-info text-center">{{item["mean"]}}</h4>
+    <h3 class="text-success text-center" id="func">{{item["func"]}}:</h3>
+    <h4 class="text-primary text-center" id="mean">{{item["mean"]}}</h4>
   </div>
   {% endfor %}
 </div>
