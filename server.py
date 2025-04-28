@@ -47,7 +47,7 @@ def calculate(num_, fc):
     elif fc == "arcsin":
         return f'{round(math.degrees(math.asin(num)), 4)}°'
     elif fc == "arcctg":
-        return f'{round(math.degrees(math.pi / 2 - math.atan(num)),4)}°'
+        return f'{round(math.degrees(math.pi / 2 - math.atan(num)), 4)}°'
     elif fc == "arcos":
         return f'{round(math.degrees((math.acos(num))), 4)}°'
     elif fc == "cos":
